@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterComponent Snapshot tests Snapshot of html component=: FooterComponent 1`] = `
+<footer
+  class="footer bg-dark mt-auto py-3"
+>
+  <div
+    class="container"
+  >
+    <span
+      class="text-muted"
+    >
+      All rights reserved to SuperAwesomeVehicleStore. 
+    </span>
+  </div>
+</footer>
+`;

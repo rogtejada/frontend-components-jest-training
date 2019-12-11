@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle, VehicleType } from '../shared/vehicle';
+import { Paging } from '../shared/paging';
+import { VehicleService } from '../core/vehicle.service';
 
 @Component({
   selector: 'app-cars',
@@ -8,10 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class CarsComponent implements OnInit {
   title = 'Vehicle Store';
   subtitle = 'Cars Section';
-  
-  constructor() { }
+  vehicles: Vehicle[] = [];
+  paging: Paging = { page: 0 };
+
+  constructor(private vehicleService: VehicleService) { }
 
   ngOnInit() {
+    this.vehicles = this.vehicleService.searchVehicle(VehicleType.CAR, this.paging);
   }
-
 }

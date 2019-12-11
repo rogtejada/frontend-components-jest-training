@@ -19,9 +19,23 @@ describe('FooterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('Unit tests', () => {
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
   });
 
-  
+  describe('DOM tests', () => {
+    it('the footer element should exist', () => {
+      const footer = fixture.debugElement.nativeElement.querySelector('footer');
+      expect(footer).toBeTruthy();
+    });
+  });
+
+  describe('Snapshot tests', () => {
+    it('Snapshot of html component=', () => {
+      const footer = fixture.debugElement.nativeElement.querySelector('footer');
+      expect(footer).toMatchSnapshot('FooterComponent');
+    });
+  });
 });
